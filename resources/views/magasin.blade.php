@@ -22,7 +22,7 @@
         <button style="width:100%;" type="button" name="button">ajouter au panier</button>
         </div>
       @endforeach
-    @elseif ($products == 1)
+    @elseif (sizeof($products) == 1)
         <div class="wrapper"style="margin-right:15px;">
           <table id="product-table">
             <tr>

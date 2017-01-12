@@ -44,11 +44,11 @@ class FormulaireController extends Controller
 
       if ($ID == NULL) {
         DB::insert("insert into creators (name) values ('$nameAuthor')");
-        $lastID = DB::getPdo()->lastInsertId();
-        DB::insert("insert into products (name,description,price,height,width,creator_id) values ('$title','$desc',$price,$height,$width,$lastID)");
+        $newProd->creator_id = DB::getPdo()->lastInsertId();
+        $newProd->save();
       }else {
-        $currId = $ID[0]->id;
-        DB::insert("insert into products (name,description,price,height,width,creator_id) values ('$title','$desc',$price,$height,$width,$currId)");
+        $newProd->creator_id = $ID[0]->id;
+        $newProd->save();
       }
 
 

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MagasinController extends Controller
 {
     public function index(Request $request){
-      $products = Product::find(4);
+      $products = Product::all();
       if ($products === NULL) {
         $request->session()->flash('status','No products returned');
       }else {
