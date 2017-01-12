@@ -32,3 +32,6 @@ Route::get('/magasin', 'MagasinController@index');
 Route::get('/', 'HomeController@index');
 Route::get('/panier', 'PanierController@index');
 Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/formulaire', 'FormulaireController@index');
+Route::post('/formulaire', 'FormulaireController@create');
+Route::get('/resForm', 'FormulaireController@create');

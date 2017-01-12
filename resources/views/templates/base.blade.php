@@ -19,6 +19,7 @@
               @if(Auth::check())
               <li><a href="logout">logout</a></li>
               <li><a href="panier">panier</a></li>
+              <li><a href="formulaire">add product</a></li>
               @else
               <li><a href="login">login</a></li>
               <li><a href="register">register</a></li>
